@@ -85,7 +85,7 @@ public class ShooterYams extends SubsystemBase {
             // Gearing from the motor rotor to final shaft - 1.66667:1 = Max Free speed of 3600 RPM (~377 rad/s)
             // .withGearing(new MechanismGearing(1.66667))
             .withGearing(new MechanismGearing(1.0))
-            .withMotorInverted(false)
+            .withMotorInverted(true) //Need this on b-team bot as motors run in opposite direction as comp bot
             .withIdleMode(MotorMode.COAST)
             // .withVoltageCompensation(Units.Volts.of(12)) //Note: we can't use this - apparently it's a Pro/paid feature
             // Motor properties to prevent over currenting.

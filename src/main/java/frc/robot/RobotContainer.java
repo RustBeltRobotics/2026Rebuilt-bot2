@@ -206,7 +206,8 @@ public class RobotContainer {
 
         //Apply different current limits in teleop vs auto - we can allow higher limits in auto since we're not concerned about brownouts as much and we want max performance
         RobotModeTriggers.teleop().onTrue(Commands.runOnce(() -> {
-          shooter.setDefaultCommand(shooter.idleAtLowRpm());
+          //TODO: MJR disabled this for testing in the lab
+          // shooter.setDefaultCommand(shooter.idleAtLowRpm());
           drivetrain.applyTeleopCurrentLimits(Constants.Kinematics.DRIVE_MOTOR_SUPPLY_CURRENT_LIMIT_TELEOP);
         }));
         
